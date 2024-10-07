@@ -1,8 +1,8 @@
-import AppRoutes from './Routes/AppRoutes';
+import AdminDash from './AdminDash/Admindash';
 function App(){
   return(
     <>
-     <AppRoutes />
+     <AdminDash/>
     </>
   )
 }

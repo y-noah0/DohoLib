@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    float: right;
+    margin-right: 20px;
+}
+.topChoicesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 320px;
+
+}
+.topChoicesWrapper h1{
+    font-size: 32px;
+    margin-left: 24px;
+    letter-spacing: 4%;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.topChoicescards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.topChoicescard {
+    background-color: white;
+    width: 150px;
+    height: 228px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.topChoicescard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.topChoicescard img:hover {
+    transform: scale(1.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}

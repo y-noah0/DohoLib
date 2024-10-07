@@ -1,55 +1,19 @@
-import styles from './Stats.module.css';
-import {useState, useEffect} from 'react'
-function Stats(){
-    const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [selectedPeriod, setSelectedPeriod] = useState("This week");
+// StatCard.jsx
+import React from "react";
+import styles from "./Stats.module.css";
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
+const Stats = ({ number, description, icon }) => {
+  return (
+    <div className={styles.statCard}>
+      <div className={styles.statInfo}>
+        <h2>{number}</h2>
+        <p>{description}</p>
+      </div>
+      <div className={styles.statIcon}>
+        <img src={icon} alt={description} />
+      </div>
+    </div>
+  );
+};
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
-  const formatDate = (date) => {
-    const options = {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      weekday: "short",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-    };
-    return date
-      .toLocaleDateString("en-US", options)
-      .replace(",", "  |")
-      .toUpperCase();
-  };
-
-  const handlePeriodChange = (e) => {
-    setSelectedPeriod(e.target.value);
-  };
-    return(
-          <header className={styles.header}>
-            <div className={styles.text}>
-              <h1>
-                Hello, <span className={styles.librarian}>Librarian</span>
-              </h1>
-              <p className={styles.date}>{formatDate(currentDateTime)}</p>
-            </div>
-
-            <div className={styles.dropdown}>
-              <select value={selectedPeriod} onChange={handlePeriodChange}>
-                <option value="This week">This week</option>
-                <option value="2 weeks">2 weeks</option>
-                <option value="This month">This month</option>
-              </select>
-            </div>
-          </header>
-    )
-}
-export default Stats
+export default Stats;

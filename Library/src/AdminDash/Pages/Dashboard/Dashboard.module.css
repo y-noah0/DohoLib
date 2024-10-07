@@ -1,0 +1,31 @@
+.container {
+    float: right;
+    width: 77%;
+    margin-top: 1%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto; /* Allow scrolling */
+    height: calc(100vh - 100px); /* Adjust this value */
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.third{
+    display: flex;
+    justify-content: space-between;
+}

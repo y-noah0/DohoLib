@@ -1,0 +1,81 @@
+.container {
+    font-family: var(--font-primary);
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 96%;
+    height: 70%;
+    float: right;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .viewMoreButton {
+    padding: 10px 20px;
+    border: 1px solid #b8b8b8;
+    border:rgb(129, 128, 128)e;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .viewMoreButton:hover {
+    background-color: #adadad;
+  }
+  
+  .table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    border-bottom: 1px solid #b8b8b8;
+
+  }
+  
+  .table th, .table td {
+
+    padding: 12px;
+    border-bottom: 1px solid #b8b8b8;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #ffffff;
+  }
+
+  
+  .table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  .bookImage {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.Lost {
+    color: red;
+  }
+  
+  .status.Retrieved {
+    color: blue;
+  }
+  
+  .status.Current {
+    color: orange;
+  }

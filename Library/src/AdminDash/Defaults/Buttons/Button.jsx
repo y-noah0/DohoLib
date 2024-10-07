@@ -1,9 +1,23 @@
-import propTypes from 'prop-types'
-function Button(props) {
-    return <button>{props.name}</button>;
+// Button.jsx
+import React from 'react';
+import styles from './Button.module.css';
+
+const Button = ({ onClick, href, children, variant = 'default' }) => {
+  const classNames = `${styles.button} ${styles[variant]}`;
+
+  if (href) {
+    return (
+      <a href={href} className={classNames}>
+        {children}
+      </a>
+    );
   }
-  Button.propTypes = {
-    name: propTypes.string.isRequired,
-  };    
-  export default Button;
-  
+
+  return (
+    <button onClick={onClick} className={classNames}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;

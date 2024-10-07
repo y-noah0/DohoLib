@@ -1,0 +1,56 @@
+/* Button.module.css */
+.button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .default {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+  }
+  
+  .default:hover {
+    background-color: #bdbdbd;
+  }
+  
+  .outline {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #acacac;
+  }
+  
+  .outline:hover {
+    background-color: #a1a1a1;
+    color: rgb(0, 0, 0);
+  }
+  
+  .text {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+  }
+  
+  .text:hover {
+    text-decoration: underline;
+  }
+  
+  /* New styles added for the 'viewmore' variant */
+  .viewmore {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    border: 1px solid #afafaf;
+    padding: 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .viewmore:hover {
+    background-color: #f2f2f2; /* Optional hover effect */
+  }
