@@ -1,23 +1,22 @@
-import styles from './Overdue.module.css';
-import book1 from '../../../../assets/Images/TopChoices/book1.png';
-import book2 from '../../../../assets/Images/TopChoices/book2.png';
-import book3 from '../../../../assets/Images/TopChoices/book3.png';
+import React, { useState, useEffect } from "react";
+import styles from "./Overdue.module.css";
 import Button from "../../../Defaults/Buttons/Button";
+import overdueBooksData from "../../../../../public/Overdue/OverdueData.json";
 
+const Overdue = ({ inDashboard }) => {
+  const [overdueBooks, setOverdueBooks] = useState([]);
 
-const Overdue = () => {
-  const overdueBooks = [
-    { userId: '001', username: 'Kwihangana Enock', bookId: 'F8-24b', bookTitle: 'Rich Dad Poor Dad', author: 'Robert Kiyosaki', overdueDays: 5, status: 'Lost', cover: `${book1}` },
-    { userId: '455', username: 'Irabizi Yannick Noah', bookId: 'F9-24Y', bookTitle: 'The Art of War', author: 'Sun Tzu', overdueDays: 2, status: 'Retrieved', cover: `${book2}` },
-    { userId: '002', username: 'MUHIRE Jean Deu', bookId: 'F8-34b', bookTitle: 'The Subtle Art Of Not Giving A F*ck', author: 'Mark Manson', overdueDays: 1, status: 'Lost', cover: `${book3}` },
-    { userId: '003', username: 'MUHIRE Jean Deu', bookId: 'F8-34c', bookTitle: 'The Subtle Art Of Not Giving A F*ck', author: 'Mark Manson', overdueDays: 1, status: 'Lost', cover: `${book3}` },
-  ];
+  useEffect(() => {
+    setOverdueBooks(overdueBooksData);
+  }, []);
+
+  const displayedBooks = inDashboard ? overdueBooks.slice(0, 3) : overdueBooks;
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${!inDashboard ? styles.largeContainer : ""}`}>
       <div className={styles.header}>
         <h2>Books Overdue</h2>
-        <Button variant="viewmore" >
+        <Button variant="viewmore">
           View More
         </Button>
       </div>
@@ -34,7 +33,7 @@ const Overdue = () => {
           </tr>
         </thead>
         <tbody>
-          {overdueBooks.map((book) => (
+          {displayedBooks.map((book) => (
             <tr key={book.bookId}>
               <td>{book.userId}</td>
               <td>{book.username}</td>

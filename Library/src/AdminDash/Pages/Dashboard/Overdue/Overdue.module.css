@@ -4,12 +4,20 @@
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 96%;
-    height: 70%;
     float: right;
+    width: 96%;
   }
-  
+  .largeContainer{
+    font-family: var(--font-primary);
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    float: right;
+    width: 77%;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .header {
     display: flex;
     justify-content: space-between;

@@ -1,19 +1,28 @@
-// ReservationTable.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Reservations.module.css";
 import Button from "../../../Defaults/Buttons/Button";
+import reservationsData from "../../../../../public/Reservation/ReservationData.json";
 
-const reservations = [
-  { userId: "001", bookName: "1984", author: "George Orwell", status: "Pending" },
-  { userId: "002", bookName: "To Kill a Mockingbird", author: "Harper Lee", status: "Expired" },
-];
+const Reservation = ({ inDashboard }) => {
+  const [reservations, setReservations] = useState([]);
 
-const Reservation = () => {
+  useEffect(() => {
+    setReservations(reservationsData);
+  }, []);
+
+  const displayedReservations = inDashboard
+    ? reservations.slice(0, 3)
+    : reservations;
+
   return (
-    <div className={styles.tableContainer}>
+    <div
+      className={`${styles.tableContainer} ${
+        !inDashboard ? styles.wideTableContainer : ""
+      }`}
+    >
       <div className={styles.text}>
         <h3>Reservation</h3>
-        <Button variant="viewmore" >
+        <Button variant="viewmore">
           View More
         </Button>
       </div>
@@ -27,7 +36,7 @@ const Reservation = () => {
           </tr>
         </thead>
         <tbody>
-          {reservations.map((reservation, index) => (
+          {displayedReservations.map((reservation) => (
             <tr key={reservation.userId}>
               <td>{reservation.userId}</td>
               <td>{reservation.bookName}</td>

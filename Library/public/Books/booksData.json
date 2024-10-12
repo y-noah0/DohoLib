@@ -1,0 +1,130 @@
+[
+    {
+      "id": "B-001",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "coverImage": "https://example.com/rich-dad-poor-dad.jpg",
+      "category": "Finance",
+      "quantity": 20
+    },
+    {
+      "id": "B-002",
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "coverImage": "https://example.com/think-grow-rich.jpg",
+      "category": "Self-help",
+      "quantity": 15
+    },
+    {
+      "id": "B-003",
+      "title": "The Intelligent Investor",
+      "author": "Benjamin Graham",
+      "coverImage": "https://example.com/intelligent-investor.jpg",
+      "category": "Finance",
+      "quantity": 8
+    },
+    {
+      "id": "B-004",
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "coverImage": "https://example.com/lean-startup.jpg",
+      "category": "Entrepreneurship",
+      "quantity": 12
+    },
+    {
+      "id": "B-005",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "coverImage": "https://example.com/atomic-habits.jpg",
+      "category": "Self-help",
+      "quantity": 25
+    },
+    {
+      "id": "B-006",
+      "title": "Zero to One",
+      "author": "Peter Thiel",
+      "coverImage": "https://example.com/zero-to-one.jpg",
+      "category": "Entrepreneurship",
+      "quantity": 10
+    },
+    {
+      "id": "B-007",
+      "title": "The 4-Hour Workweek",
+      "author": "Tim Ferriss",
+      "coverImage": "https://example.com/4-hour-workweek.jpg",
+      "category": "Productivity",
+      "quantity": 18
+    },
+    {
+      "id": "B-008",
+      "title": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "coverImage": "https://example.com/power-of-now.jpg",
+      "category": "Spirituality",
+      "quantity": 30
+    },
+    {
+      "id": "B-009",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "coverImage": "https://example.com/deep-work.jpg",
+      "category": "Productivity",
+      "quantity": 22
+    },
+    {
+      "id": "B-010",
+      "title": "Principles",
+      "author": "Ray Dalio",
+      "coverImage": "https://example.com/principles.jpg",
+      "category": "Finance",
+      "quantity": 16
+    },
+    {
+        "id": "B-011",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    },
+    {
+        "id": "B-012",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    },
+    {
+        "id": "B-013",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    },
+    {
+        "id": "B-014",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    },
+    {
+        "id": "B-015",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    },
+    {
+        "id": "B-016",
+        "title": "Principles",
+        "author": "Ray Dalio",
+        "coverImage": "https://example.com/principles.jpg",
+        "category": "Finance",
+        "quantity": 16
+    }
+  ]

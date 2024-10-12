@@ -4,9 +4,10 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    width: 220px;
+    width: 200px;
     height: 120px;
     gap: 20px;
+    cursor: pointer;
   }
   
   .statInfo h2 {

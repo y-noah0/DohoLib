@@ -1,0 +1,94 @@
+/* Other existing styles in BookList.module.css */
+
+.bookListContainer {
+    font-family: var(--font-primary);
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    float: right;
+    width: 77%;
+    height: calc(100vh - 100px);
+    margin-top: 1%;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Reusing search bar styles from Menu.module.css */
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 300px;
+    height: 30px; /* Fixed height */
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    padding-left: 6px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.searchIcon {
+    color: #6c63ff; /* Custom color for the search icon */
+    cursor: pointer;
+}
+
+.addButton {
+    padding: 10px 20px;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    border-bottom: 1px solid #b8b8b8;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    padding: 20px;
+    border-bottom: 1px solid #b8b8b8;
+    text-align: left;
+}
+
+.table th {
+    background-color: #ffffff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.activePage {
+    background-color: #5a67d8;
+    color: rgb(194, 0, 194);
+}

@@ -13,6 +13,8 @@ import bookIcon from "../../../assets/Images/status/bookIcon.png";
 import totalbook from "../../../assets/Images/status/totalBooks.png";
 import overdue from "../../../assets/Images/status/overdue.png";
 import openedbook from "../../../assets/Images/status/openedBook.png";
+import Categories from "../Books/Categories/Categories";
+import BookList from "../Books/Category/BookList/BookList";
 function Dashboard() {
     const datasets = [
         { data: [100, 200, 300, 400, 500], borderColor: "blue" },
@@ -25,7 +27,7 @@ function Dashboard() {
       };
   return (
     <div className={styles.container}>
-          <Header />
+           <Header />
           <div className={styles.stats}>
             <Stats number="122" description="Total Visitors" icon={bookIcon} />
             <Stats number="96" description="Books Borrowed" icon={openedbook} />
@@ -34,12 +36,12 @@ function Dashboard() {
           </div>
       <div className={styles.first}>
       
-        <Reservation />
+      <Reservation inDashboard={true} />
         <TopReaders />
       </div>
       <div className={styles.second}>
         <Topchoices />
-        <Overdue />
+        <Overdue inDashboard={true} />
       </div>
 
       <div className={styles.third}>
@@ -50,7 +52,7 @@ function Dashboard() {
       onButtonClick={handleButtonClick}
     />
         <Issued />
-      </div>
+      </div> 
     </div>
   );
 }

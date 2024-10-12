@@ -1,0 +1,14 @@
+/* Reusing styles from Overdue.module.css */
+.bookRow {
+    transition: background-color 0.3s ease;
+}
+
+.bookRow:hover {
+    background-color: #f9f9f9;
+}
+
+.coverImage {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import style from "./Sidebar.module.css";
 import home from "../../../../assets/Images/Menu/home.png";
 import books from "../../../../assets/Images/Menu/books.png";
@@ -8,7 +8,6 @@ import reservation from "../../../../assets/Images/Menu/reservation.png";
 function Sidebar() {
   const menubar = [
     { title: "Home", icon: home, path: "/" },
-    { title: "Borrowing", icon: books, path: "/borrowing" },
     { title: "Books", icon: books, path: "/books" },
     { title: "Books Overdue", icon: overdue, path: "/overdue" },
     { title: "Reservation", icon: reservation, path: "/reservation" },
@@ -22,7 +21,7 @@ function Sidebar() {
             <img src={item.icon} alt={item.title.toLowerCase()} />
             <span>
               <h3>
-                <a href={item.path}>{item.title}</a>
+                <Link to={item.path}>{item.title}</Link>
               </h3>
             </span>
           </div>
