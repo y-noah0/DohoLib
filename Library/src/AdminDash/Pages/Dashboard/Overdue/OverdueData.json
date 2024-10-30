@@ -1,0 +1,42 @@
+[
+  {
+    "userId": "001",
+    "username": "Kwihangana Enock",
+    "bookId": "F8-24b",
+    "bookTitle": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "overdueDays": 5,
+    "status": "Lost",
+    "cover": "book1.png"
+  },
+  {
+    "userId": "455",
+    "username": "Irabizi Yannick Noah",
+    "bookId": "F9-24Y",
+    "bookTitle": "The Art of War",
+    "author": "Sun Tzu",
+    "overdueDays": 2,
+    "status": "Retrieved",
+    "cover": "book2.png"
+  },
+  {
+    "userId": "002",
+    "username": "MUHIRE Jean Deu",
+    "bookId": "F8-34b",
+    "bookTitle": "The Subtle Art Of Not Giving A F*ck",
+    "author": "Mark Manson",
+    "overdueDays": 1,
+    "status": "Lost",
+    "cover": "book3.png"
+  },
+  {
+    "userId": "003",
+    "username": "MUHIRE Jean Deu",
+    "bookId": "F8-34c",
+    "bookTitle": "The Subtle Art Of Not Giving A F*ck",
+    "author": "Mark Manson",
+    "overdueDays": 1,
+    "status": "Lost",
+    "cover": "book3.png"
+  }
+]

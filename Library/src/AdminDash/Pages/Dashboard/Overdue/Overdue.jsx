@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Overdue.module.css";
 import Button from "../../../Defaults/Buttons/Button";
-import overdueBooksData from "../../../../../public/Overdue/OverdueData.json";
+import overdueBooksData from "./OverdueData.json";
 
 const Overdue = ({ inDashboard }) => {
   const [overdueBooks, setOverdueBooks] = useState([]);

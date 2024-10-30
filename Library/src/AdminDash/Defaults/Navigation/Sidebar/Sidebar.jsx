@@ -11,6 +11,8 @@ function Sidebar() {
     { title: "Books", icon: books, path: "/books" },
     { title: "Books Overdue", icon: overdue, path: "/overdue" },
     { title: "Reservation", icon: reservation, path: "/reservation" },
+    { title: "Borrowing", icon: reservation, path: "/borrowing" },
+    { title: "Attendance", icon: reservation, path: "/attendance" },
   ];
 
   return (

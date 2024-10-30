@@ -7,6 +7,8 @@ import style from "./Admindash.module.css";
 import Overdue from "./Pages/Dashboard/Overdue/Overdue";
 import BookList from "./Pages/Books/Category/BookList/BookList";
 import Reservation from "./Pages/Dashboard/Reservations/Resevations";
+import Attandance from "./Pages/Dashboard/Attandance/Attandance";
+import Borrowing from "./Pages/Dashboard/Borrowing/Borrowing";
 
 function AdminDash() {
   return (
@@ -20,6 +22,8 @@ function AdminDash() {
           <Route path="/booklist" element={<BookList />} />
           <Route path="/overdue" element={<Overdue />} />
           <Route path="/reservation" element={<Reservation />} />
+          <Route path="/borrowing" element={<Borrowing />} />
+          <Route path="/attendance" element={<Attandance />} />
         </Routes>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Reservations.module.css";
 import Button from "../../../Defaults/Buttons/Button";
-import reservationsData from "../../../../../public/Reservation/ReservationData.json";
+import reservationsData from "./ReservationData.json";
 
 const Reservation = ({ inDashboard }) => {
   const [reservations, setReservations] = useState([]);

@@ -1,8 +1,10 @@
+// BookList.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './BookList.module.css';
 import BookRow from '../BookRow/BookRow';
 import { Search } from '@mui/icons-material'; // Importing the search icon
-import booksData from '../../../../../../public/Books/booksData.json'; // Adjust path if necessary
+import booksData from './booksData.json'; // Adjust path if necessary
+import Pagination from '../../../../Defaults/Pagination/Pagination'; // Import the Pagination component
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -31,7 +33,7 @@ const BookList = () => {
   // Handle Search Input
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset to page 1 when search query changes
   };
 
   // Handle Pagination
@@ -58,6 +60,8 @@ const BookList = () => {
         
         <button className={styles.addButton}>Add Book</button>
       </div>
+      
+      {/* Books Table */}
       <table className={styles.table}>
         <thead>
           <tr>
@@ -75,17 +79,13 @@ const BookList = () => {
           ))}
         </tbody>
       </table>
-      <div className={styles.pagination}>
-        {[...Array(totalPages)].map((_, index) => (
-          <button
-            key={index + 1}
-            onClick={() => handlePageChange(index + 1)}
-            className={currentPage === index + 1 ? styles.activePage : ''}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+
+      {/* Pagination Component */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };
