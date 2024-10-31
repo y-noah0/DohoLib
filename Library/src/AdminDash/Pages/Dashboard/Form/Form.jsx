@@ -1,5 +1,5 @@
 // Modal.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Form.module.css';
 
 const Form = ({ isOpen, onClose, onAction }) => {
@@ -7,12 +7,36 @@ const Form = ({ isOpen, onClose, onAction }) => {
   const [bookName, setBookName] = useState('');
   const [condition, setCondition] = useState('');
   const [returnDate, setReturnDate] = useState('');
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   if (!isOpen) return null;
 
   const handleSubmit = () => {
+    // Reset error and success messages
+    setError('');
+    setSuccessMessage('');
+
+    // Validation: Check if all fields are filled
+    if (!registrationNumber || !bookName || !condition || !returnDate) {
+      setError('Please fill out all fields.');
+      return;
+    }
+
+    // If validation passes, perform the action and show success message
     onAction({ registrationNumber, bookName, condition, returnDate });
-    onClose();
+    setSuccessMessage('Book has been successfully lent!');
+
+    // Clear form fields
+    setRegistrationNumber('');
+    setBookName('');
+    setCondition('');
+    setReturnDate('');
+
+    // Close modal after a short delay (optional)
+    setTimeout(() => {
+      onClose();
+    }, 1500);
   };
 
   return (
@@ -20,7 +44,7 @@ const Form = ({ isOpen, onClose, onAction }) => {
       <div className={styles.modalContent}>
         <h2>Lend Book</h2>
         <button className={styles.closeButton} onClick={onClose}>✖</button>
-        
+
         <div className={styles.form}>
           <label>Registration Number</label>
           <input
@@ -53,6 +77,12 @@ const Form = ({ isOpen, onClose, onAction }) => {
             value={returnDate}
             onChange={(e) => setReturnDate(e.target.value)}
           />
+
+          {/* Display error message if validation fails */}
+          {error && <p className={styles.errorMessage}>{error}</p>}
+
+          {/* Display success message on successful submission */}
+          {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
         </div>
 
         <button className={styles.actionButton} onClick={handleSubmit}>Done</button>

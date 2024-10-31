@@ -1,5 +1,5 @@
 // Borrowing.jsx
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import styles from "./Borrowing.module.css";
 import Button from "../../../Defaults/Buttons/Button";
 import Form from "../Form/Form"; // Import the Modal component
@@ -22,7 +22,7 @@ const Borrowing = ({ inDashboard }) => {
 
   // Filter books based on search term
   const filteredBooks = borrowingBooks.filter((book) =>
-    book.UserName.toLowerCase().includes(searchTerm.toLowerCase())
+    book.BookTitle.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Calculate total pages
@@ -58,7 +58,7 @@ const Borrowing = ({ inDashboard }) => {
         <div className={styles.searchContainer}>
           <input
             type="text"
-            placeholder="Search by User Name"
+            placeholder="Search by Book title"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={styles.searchInput}
